@@ -24,7 +24,7 @@ if __name__ == '__main__':
     # time.sleep(3.0)
 
     # cf.land(targetHeight = 0.0, duration = 2.0)
-
+    #test
     traj1 = uav_trajectory.Trajectory()
     traj1.loadcsv("takeoff.csv")
 
