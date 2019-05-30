@@ -26,7 +26,7 @@ if __name__ == '__main__':
         drone.setParam("kalman/resetEstimation", 1)
 
     
-    for drone in swarm:
+    '''for drone in swarm:
         drone.takeoff(targetHeight = 0.5, duration = 4.0)
     time.sleep(5.0)
 
@@ -36,8 +36,8 @@ if __name__ == '__main__':
     #cf.goTo(goal = [0.0, 0.0, 0.0], yaw=0.5, duration = 5.0, relative = False)
     for drone in swarm:
         drone.land(targetHeight = 0.0, duration = 5.0)
-    time.sleep(6.0)
-    '''traj1 = uav_trajectory.Trajectory()
+    time.sleep(6.0)'''
+    traj1 = uav_trajectory.Trajectory()
     traj1.loadcsv("takeoff.csv")
 
     traj2 = uav_trajectory.Trajectory()
@@ -50,28 +50,28 @@ if __name__ == '__main__':
 
     for drone in swarm:
         #drone.startTrajectory(0, timescale=1.0)
-        drone.takeoff(targetHeight=.5,duration=4.0)
+        drone.takeoff(targetHeight=1.0,duration=4.0)
     #time.sleep(traj1.duration * 2.0)
-    time.sleep(6.0)
+    time.sleep(4.0)
 
     
         #cf.startTrajectory(0, timescale=1.0)
-    cf2.startTrajectory(0, timescale=1.0)
-    time.sleep(traj1.duration * 1.5)
+    #cf2.startTrajectory(0, timescale=1.0)
+    
 
-    cf1.startTrajectory(1, timescale=1.0)
+    #cf1.startTrajectory(1, timescale=1.0)
     cf2.startTrajectory(1, timescale=1.0, reverse=True)
     #for drone in swarm:
      #   drone.startTrajectory(1, timescale=2.0)
-    time.sleep(traj2.duration * 2.0)
+    time.sleep(traj2.duration * 1.1)
 
     #cf.startTrajectory(1, timescale=2.0)
     #time.sleep(traj2.duration * 2.0)
 
     for drone in swarm:
         #drone.startTrajectory(0, timescale=1.0, reverse=True)
-        drone.land(targetHeight=0.0,duration=6.0)
-    time.sleep(7.0)'''
+        drone.land(targetHeight=0.02,duration=6.0)
+    time.sleep(7.0)
 
     #cf.startTrajectory(0, timescale=1.0, reverse=True)
     #time.sleep(traj1.duration * 1.0)
